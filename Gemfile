@@ -49,8 +49,7 @@ end
 group :test do
   gem 'capybara', '~> 3.33'
   gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
-  gem"shoulda-matchers", require: false
-
+  gem "shoulda-matchers", require: false
 end
 
 group :development do
