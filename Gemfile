@@ -42,10 +42,13 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
 end
 
 group :test do
-  gem 'rspec'
+  gem 'capybara', '~> 3.33'
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
 end
 
 group :development do
