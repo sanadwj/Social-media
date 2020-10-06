@@ -3,7 +3,7 @@
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
     <%= link_to 'Friend_request', user_friendships_path(user), class: 'profile-link', method: :post %>
-    <%= link_to 'Accept Invite', accept_path(user), class: 'profile-link', method: :post %>
+    <%= link_to 'Accept Invite', accept_path(current_user.id), class: 'profile-link', method: :post %>
    
   </span>
 </li>

@@ -11,7 +11,8 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-    @friendship = current_user.friend_requests(:user_id)
+    @friendship =  Friendship.find_by(params[:id])
+    @friendship.update confirmed: true
 
     
     # @friendship.confirmed_friend()
