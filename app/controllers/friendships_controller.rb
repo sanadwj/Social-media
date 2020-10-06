@@ -11,7 +11,14 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-  
+    @friendship = current_user.friend_requests(:user_id)
+
+    
+    # @friendship.confirmed_friend()
+    
+    #change the status of friendship to true if false
+
+    # current_user.confirmed_friend(a)
   end
 
   def reject
