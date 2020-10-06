@@ -6,7 +6,8 @@
       <%= render @posts %>
     </ul>
     <ul class="posts">
-      <%= current_user.friends %>
+      <%= current_user.friend_requests %>
+      <%=  current_user.confirmed_friend(@user)%>
     </ul>
   </article>
 </section>
