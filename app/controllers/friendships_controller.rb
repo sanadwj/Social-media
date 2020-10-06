@@ -11,15 +11,10 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-    @friendship =  Friendship.find_by(params[:id])
+
+    @friendship =  Friendship.find_by() //////////////////////////////////
     @friendship.update confirmed: true
-
-    
-    # @friendship.confirmed_friend()
-    
-    #change the status of friendship to true if false
-
-    # current_user.confirmed_friend(a)
+    redirect_to users_path, notice: 'Friendship accepted successfully'
   end
 
   def reject

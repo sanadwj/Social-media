@@ -6,7 +6,25 @@
       <%= render @posts %>
     </ul>
     <ul class="posts">
-      <%= current_user.friend_requests %>
+    <h3>Friends</h3>
+    <% current_user.friends.each do |person| %>
+      <%= link_to person.name, user_path(person.id)  %> 
+    <% end %>
     </ul>
+    <ul class="posts">
+    <% if current_user.id == @user.id %>
+      <h3>Pending Requests</h3>
+      <% current_user.pending_friends.each do |person| %>
+        <%= link_to person.name, user_path(person.id)  %> 
+      <% end %>
+      </ul>
+      <ul class="posts">
+      <h3>Friends Requests</h3>
+      <%= current_user.friend_requests.each do |person| %>
+        <%= link_to person.name, user_path(person.id)  %>
+        <%= link_to 'Accept Invite', accept_path(person.id), class: 'profile-link', method: :post %>
+      <% end %>
+      </ul>
+    <% end %>
   </article>
 </section>
