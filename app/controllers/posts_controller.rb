@@ -19,17 +19,16 @@ class PostsController < ApplicationController
 
   private
 
-  # attr_accessor :a
-
-  # # def get_friends_id
-  # #   current_user.friends.each do |person|
-  # #     @a = person.id
-  # #   end
-  # #   @a  
-  # # end
+  def get_friends_id
+    @ids = []
+    current_user.friends.each do |person|
+      @ids << person.id
+    end
+      @ids << current_user.id
+  end
 
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user).where(id: get_friends_id)
   end
 
   def post_params
