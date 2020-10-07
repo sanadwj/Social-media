@@ -20,9 +20,9 @@
       </ul>
       <ul class="posts">
       <h3>Friends Requests</h3>
-      <%= current_user.friend_requests.each do |person| %>
+      <% current_user.friend_requests.each do |person| %>
         <%= link_to person.name, user_path(person.id)  %>
-        <%= link_to 'Accept Invite', accept_path(person.id), class: 'profile-link', method: :post %>
+        <%= link_to 'Accept Invite', accept_path(user_id: person.id, friend_id: current_user.id), class: 'profile-link', method: :post %>
       <% end %>
       </ul>
     <% end %>
