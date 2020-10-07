@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   post 'accept', to: 'friendships#accept' 
-
+  delete 'reject', to: 'friendships#reject'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end
