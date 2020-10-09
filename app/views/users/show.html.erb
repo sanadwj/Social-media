@@ -8,7 +8,8 @@
     <ul class="posts">
     <h3>Friends</h3>
     <% current_user.friends.each do |person| %>
-      <%= link_to person.name, user_path(person.id)  %> 
+      <%= link_to person.name, user_path(person.id)  %>
+      <%= link_to 'Unfriend', reject_path(user_id: person.id, friend_id: current_user.id), class: 'btn btn-danger', method: :delete %>
     <% end %>
     </ul>
     <ul class="posts">
