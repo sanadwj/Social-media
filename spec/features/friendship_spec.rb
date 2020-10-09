@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'spec_helper'
 
 RSpec.describe 'Testing friend request send, cancel invite' do
   before :each do

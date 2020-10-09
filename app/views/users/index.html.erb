@@ -4,7 +4,11 @@
     <%= render @users %>
   </ul>
   <ul class="users-list ">
-  <h4 class="text-center">Friends suggestions</h4>
-    <%= render @mutual_friends %>
+   <% if @mutual_friends.empty? %>
+      <% nil %>
+    <% else %>
+    <h4 class="text-center">Friends suggestions</h4>
+      <%= render @mutual_friends %>
+    <% end %>
   </ul>
 </section>

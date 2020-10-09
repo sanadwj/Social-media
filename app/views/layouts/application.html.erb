@@ -10,7 +10,8 @@
   <body>
     <nav class="nav px-4">
       <%= link_to 'Stay in touch', root_path %>
-      <div class="menu">
+      <div class="menu d-flex">
+      <div class="menu-item justify-content-start">
         <div class="menu-item">
           <%= menu_link_to 'Timeline', posts_path %>
         </div>
@@ -18,12 +19,15 @@
           <%= menu_link_to 'All users', users_path %>
         </div>
       </div>
-      <% if current_user %>
-        <%= link_to current_user.name, user_path(current_user) %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in', user_session_path %>
-      <% end %>
+      <div class="menu-item justify-content-end">
+        <% if current_user %>
+          <%= link_to current_user.name, user_path(current_user), class: "mx-4" %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign in', user_session_path %>
+        <% end %>
+      </div>
+    </div>
     </nav>
     <% if notice.present? %>
       <div class="notice">

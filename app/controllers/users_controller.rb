@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def show_mutual_friends
     @ids = []
     current_user.friends.each do |person|
@@ -26,5 +26,4 @@ class UsersController < ApplicationController
   def show_two_friends
     show_mutual_friends.sample(2)
   end
-
 end
