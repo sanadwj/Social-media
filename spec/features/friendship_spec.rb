@@ -37,7 +37,7 @@ RSpec.describe 'Testing friend request send, cancel invite' do
       fill_in 'Email', with: 'test2@test.com'
       fill_in 'Password', with: '123456'
       click_button 'Log in'
-      visit "/users/7"
+      visit '/users/7'
       expect(page).to have_content('Friends')
     end
   end

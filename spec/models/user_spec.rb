@@ -2,10 +2,9 @@ require 'rails_helper'
 require './app/models/user.rb'
 
 RSpec.describe User, type: :model do
-  let(:user){ User.new(id: 1) }
-  let(:friend){ User.new(id: 2)}
-  let(:friendship) {Friendship.new(id: 1, user_id: 1, friend_id: 2, confirmed: false)}
- 
+  let(:user) { User.new(id: 1) }
+  let(:friend) { User.new(id: 2) }
+  let(:friendship) { Friendship.new(id: 1, user_id: 1, friend_id: 2, confirmed: false) }
 
   describe 'associations' do
     it { should have_many(:posts) }

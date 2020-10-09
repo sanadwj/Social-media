@@ -19,16 +19,16 @@ class PostsController < ApplicationController
 
   private
 
-  def get_friends_id
+  def verify_friends_id
     @ids = []
     current_user.friends.each do |person|
       @ids << person.id
     end
-      @ids << current_user.id
+    @ids << current_user.id
   end
 
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user).where(id: get_friends_id)
+    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user).where(user_id: verify_friends_id)
   end
 
   def post_params
