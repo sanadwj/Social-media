@@ -1,6 +1,6 @@
 module UserHelper
   def add_friend(user)
-    if current_user.id == user.id
+    if current_user.id == user.id || current_user.friend?(user)
       nil
     elsif pending_id(current_user).find { |x| x == user.id }
       link_to 'Cancel Invite', reject_path(user_id: current_user.id, friend_id: user.id),
