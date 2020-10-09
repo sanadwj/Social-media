@@ -1,6 +1,15 @@
 <li>
-  Name: <%= user.name %>
+  <div class="container">
+    <div class="row justify-content-center ">
+      <%= user.name  %>
+
+    </div>
+  </div>
   <span class="profile-link">
-    <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    <%= link_to 'See Profile',  user_path(user), class: 'btn btn-light col ' %>
+  </span>
+  <span class=" profile-link "  >
+    <%=  add_friend(user) %>
   </span>
 </li>
+<hr/>
