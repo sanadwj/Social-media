@@ -1,5 +1,14 @@
-<section class="users-section">
-  <ul class="users-list">
+<section class="users-section d-flex justify-content-between">
+  <ul class="users-list ">
+  <h4 class="text-center">All users</h4>
     <%= render @users %>
+  </ul>
+  <ul class="users-list ">
+   <% if @mutual_friends.empty? %>
+      <% nil %>
+    <% else %>
+    <h4 class="text-center">Friends suggestions</h4>
+      <%= render @mutual_friends %>
+    <% end %>
   </ul>
 </section>
