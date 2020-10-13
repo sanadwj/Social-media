@@ -1,93 +1,96 @@
-# Scaffold for social media app with Ruby on Rails
+##  Social Media Website
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+We built a social media app called “Stay in touch”. In this project, we add the following features:
 
-## Built With
+A guest user:
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+* Is able to create account/log in.
+* Can see only “Sign in” and “Sign out” page.
+
+A logged-in user:
+
+* Is able to see all users list.
+* Is able to see selected user page with their user name and all posts written by them (the most recent posts on the top).
+* Is able to send a friendship invitation.
+* Is able to see a button “Invite to friendship” next to the name of user who is not my friend yet - on both users’ list and single user page.
+* Is able to see pending friendship invitations sent to me from other users.
+* Is able to accept or reject friendships invitation.
+* Is able to create new posts (text only).
+* Is able to like/dislike posts (but I can like single post only once).
+* Is able to add comments to posts.
+* Is able to see “Timeline” page with posts (with number of likes and comments) written by me and all my friends (the most recent posts on the top).
+* Timeline page should be the root page of the app.
 
 ## Live Demo
 
-TBA
+[Project live website](https://arcane-beyond-26196.herokuapp.com/users/sign_in)
 
 
-## Getting Started
+## Demo
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
+![gif of the project](app/assets/images/stayintouch.gif)
 
 
 ### Usage
 
-Start server with:
+* This project intends to practice our skills working with Associations and Database;
+* Prepare data architecture documentation;
+* Work with GitFlow principles. 
+* Work with deployment to Heroku.
 
-```
-    rails server
-```
+### Build With
 
-Open `http://localhost:3000/` in your browser.
+- Ruby 2.7.0p0
+- Ruby on Rails 5.2.4.4
+- Heroku
 
-### Run tests
+### Setup
+ - Open a terminal
+ - Copy this code : 
+ 
+        
+        git clone https://github.com/sanadwj/ror-social-scaffold
 
-```
-    rpsec --format documentation
-```
+        bundle install
+       
+        rails db:migrate
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+        access http://localhost:3000
 
-### Deployment
+        - Open a terminal
+ 
+ - To check RSpecs : 
+ 
+        bundle exec rspec
 
-TBA
+        
+## Author
 
-## Authors
+👤 **Carlos Veiga**
 
-TBA
+- Github: [@wrakc](https://github.com/wrakc)
+- Twitter: [@carlosveig](https://twitter.com/carlosveig)
+- Linkedin: [chveiga](https://linkedin.com/chveiga)
+
+👤 **Sanad Walid Abujbara**
+
+- Github: [@sanadwj](https://github.com/githubhandle)
+- Twitter: [@sandooog](https://twitter.com/sandooog)
+- Linkedin: [sanad-abujbara](https://linkedin.com/in/sanad-abujbara)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
-
-## Show your support
+## Show your support .
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- Microverse Team 124 (The Minskins)
+- Microverse Team 139 (The Thanatos)
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](LICENSE) licensed.
