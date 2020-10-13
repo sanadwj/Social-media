@@ -21,6 +21,11 @@ A logged-in user:
 * Is able to see “Timeline” page with posts (with number of likes and comments) written by me and all my friends (the most recent posts on the top).
 * Timeline page should be the root page of the app.
 
+## Live Demo
+
+[Project live website](https://arcane-beyond-26196.herokuapp.com/users/sign_in)
+
+
 ## Demo
 
 ![gif of the project](app/assets/images/stayintouch.gif)
